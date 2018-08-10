@@ -1,5 +1,6 @@
 package com.hyb.hfdp.chapter02;
 
+import com.hyb.hfdp.chapter02.javaimpl.WeatherDataObservable;
 import com.hyb.hfdp.chapter02.slefimpl.CurrentConditionsDisplayBoard;
 import com.hyb.hfdp.chapter02.slefimpl.WeatherData;
 import org.junit.Test;
@@ -10,12 +11,19 @@ import org.junit.Test;
  * @author HYB
  * @since 2018/8/6 23:45
  **/
-public class ObserverPattern {
+public class ObserverPatternTest {
 
     @Test
     public void selfImplWeatherSubject() {
         WeatherData weatherData = new WeatherData();
         CurrentConditionsDisplayBoard currentConditionsDisplayBoard = new CurrentConditionsDisplayBoard(weatherData);
         weatherData.setChange(123, 32.12f, 3321.12f);
+    }
+
+    @Test
+    public void javaImplWeatherObservable() {
+        WeatherDataObservable weatherDataObservable = new WeatherDataObservable();
+        com.hyb.hfdp.chapter02.javaimpl.CurrentConditionsDisplayBoard currentConditionsDisplayBoard = new com.hyb.hfdp.chapter02.javaimpl.CurrentConditionsDisplayBoard(weatherDataObservable);
+        weatherDataObservable.measurementsChanged(22, 33, 444);
     }
 }
