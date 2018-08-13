@@ -29,10 +29,4 @@ public class Mocha extends BaseCondiment {
         return baseBeverage.getDescription() + ", Mocha";
     }
 
-//    @Override
-//    public String toString() {
-//        return getDescription();
-//    }
-
-
 }

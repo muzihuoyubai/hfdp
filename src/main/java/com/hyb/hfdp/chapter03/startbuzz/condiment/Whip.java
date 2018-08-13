@@ -25,9 +25,4 @@ public class Whip extends BaseCondiment {
     public String getDescription() {
         return baseBeverage.getDescription() + ", Whip";
     }
-
-    @Override
-    public String toString() {
-        return getDescription();
-    }
 }

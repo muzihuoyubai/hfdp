@@ -16,6 +16,4 @@ public class DarkRoast extends BaseBeverage {
     public double cost() {
         return 0.99;
     }
-
-
 }
